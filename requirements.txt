@@ -1,0 +1,14 @@
+requests 
+threading
+discord.ext
+discord
+pyautogui
+time
+re 
+http.client
+random
+json
+base64
+string
+websocket
+discum
