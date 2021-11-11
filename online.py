@@ -20,14 +20,13 @@ import websocket
 from os import system
 import discum
 
-
-
-ur = 'https://discord.com/api/v9/channels/messages'
-title = 'PussyKiller'
+os.system("cls")
+title = 'Onliner'
 system(f'title {title}')
 tokens = open('tokens.txt', 'r').read().splitlines()
 
 def activity(token, act):
+    print('[+] Activity Status')
     while True:
         ws = websocket.WebSocket()
         actt = 'Online'
@@ -47,12 +46,12 @@ def activity(token, act):
                 't': None}
              
         ws.send(json.dumps(auth))
-        time.sleep(2)
-        print('[+] Activity Status: ')
+        time.sleep(20)
+        print('[+] Activity Status')
 
 
 #text = input('Activity Status: ')
 
 for token in tokens:
-    threading.Thread(target=activity, args=(token, 'a')).start()
+    threading.Thread(target=activity, args=(token, '')).start()
 
